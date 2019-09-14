@@ -63,6 +63,7 @@ if (empty($_REQUEST['action']) || $_REQUEST['action'] != '_TD_') {
 		html_error($devil['status'].' '.$devil['msg'].': Bad API Response!');
 	}
 	$download_link = $devil['result']['url'];
+	$resp = cURL($base.'/remotedl/add?login='.$_REQUEST['up_login'].'&key='.$_REQUEST['up_pass'].'&url='.$download_link);
 	}
 
 // Written by The Devil
