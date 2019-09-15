@@ -36,9 +36,7 @@ if (empty($_REQUEST['action']) || $_REQUEST['action'] != '_TD_') {
 	echo "<table style='width:600px;margin:auto;'>\n<tr><td align='center'>\n<div id='info' width='100%' align='center'>Retrive upload ID</div>\n";
 	if($login){
 		$resp = cURL($base.'/file/ul?login='.$_REQUEST['up_login'].'&key='.$_REQUEST['up_pass']);
-		$resp = cURL($base.'/file/ul?login='.$_REQUEST['up_login'].'&key='.$_REQUEST['up_pass']);
-		$resp = cURL($base.'/file/ul?login='.$_REQUEST['up_login'].'&key='.$_REQUEST['up_pass']);
-		$resp = cURL($base.'/file/ul?login='.$_REQUEST['up_login'].'&key='.$_REQUEST['up_pass']);
+		
 	} else	$resp = cURL($base.'/file/ul');
 	
 	$devil = strpbrk($resp,'{');
