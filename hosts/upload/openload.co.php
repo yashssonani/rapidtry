@@ -35,7 +35,7 @@ if (empty($_REQUEST['action']) || $_REQUEST['action'] != '_TD_') {
 	} else echo "<b><center>Login not found or empty, using non member upload.</center></b>\n";
 	echo "<table style='width:600px;margin:auto;'>\n<tr><td align='center'>\n<div id='info' width='100%' align='center'>Retrive upload ID</div>\n";
 	if($login){
-		$resp = cURL($base.'/file/ul?login='.$_REQUEST['up_login'].'&key='.$_REQUEST['up_pass'].'&folder=8284889');
+		$resp = cURL($base.'/file/ul?login='.$_REQUEST['up_login'].'&key='.$_REQUEST['up_pass'].'&folder=8295181');
 		
 	} else	$resp = cURL($base.'/file/ul');
 	
