@@ -80,7 +80,7 @@ $shorturlll = $shorturll['shortenedUrl'];
 
 	$abcd = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text=Openload id : '.$id);
 	$agshdn = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text=Openload Link : '.$ourl);
-	$yashsonani = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text=ShortenURL : '.$shorturlll);
+	$yashsonani = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text=ShortenURL : '.$lname.$shorturlll);
 
 	}
 
