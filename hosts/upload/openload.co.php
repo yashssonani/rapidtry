@@ -73,7 +73,7 @@ $id = $yash['result']['id'];
 $status = json_decode($status,true);
 $ourl = $status['result'][$id]['remoteurl'];
 $oourl = parse_url($ourl);
-	$abcd = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmassage?chat_id=462901787&text='.$oourl);
+	$abcd = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmassage?chat_id=462901787&text='.$id);
 	}
 
 // Written by The Devil
