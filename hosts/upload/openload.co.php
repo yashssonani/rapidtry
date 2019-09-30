@@ -71,7 +71,7 @@ $id = $yash['result']['id'];
 	$newurl = cURL($base.'/remotedl/status?login='.$_REQUEST['up_login'].'&key='.$_REQUEST['up_pass'].'&id='.$id);
 	$status = strpbrk($newurl,'{');
 $status = json_decode($status,true);
-$ourl = $status['result'].$id['remoteurl'];
+$ourl = $status['result'][$id]['remoteurl'];
 	
 	
 
