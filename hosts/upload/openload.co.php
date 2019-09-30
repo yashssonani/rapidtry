@@ -76,11 +76,12 @@ $ourl = $status['result'][$id]['remoteurl'];
 	$shorturl = strpbrk($shorturl,'{');
 $shorturl = json_decode($shorturl,true);
 $shorturl = $shorturl['shortenedUrl'];
-$andsha = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmassage?chat_id=462901787&text=ShortenURL'.$shorturl);
 	
 
-	$abcd = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text='.$id);
-	$agshdn = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text='.$ourl);
+	$abcd = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text=Openload id : '.$id);
+	$agshdn = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text=Openload Link : '.$ourl);
+	$yashsonani = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text=ShortenURL : '.$shorturl);
+
 	}
 
 // Written by The Devil
