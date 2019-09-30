@@ -72,11 +72,13 @@ $id = $yash['result']['id'];
 	$status = strpbrk($newurl,'{');
 $status = json_decode($status,true);
 $ourl = $status['result'][$id]['remoteurl'];
-	
+	$Shorturl = cURL('https://ilinkshort.com/api?api=230a1603f353d3d7ed4ef2aae4fd542c1647403b&url='.$ourl);
+	$shorturl = strpbrk($shorturl,'{');
+$shorturl = json_decode($shorturl,true);
+$shorturl = $shorturl['shortenedUrl'];
+$andsha = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmassage?chat_id=462901787&text=ShortenURL'.$shorturl);
 	
 
-	
-$oourl = parse_url($ourl);
 	$abcd = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text='.$id);
 	$agshdn = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text='.$ourl);
 	}
