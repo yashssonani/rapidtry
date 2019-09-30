@@ -72,15 +72,15 @@ $id = $yash['result']['id'];
 	$status = strpbrk($newurl,'{');
 $status = json_decode($status,true);
 $ourl = $status['result'][$id]['remoteurl'];
-	$Shorturl = cURL('https://ilinkshort.com/api?api=230a1603f353d3d7ed4ef2aae4fd542c1647403b&url='.$ourl.'format=text');
-	
-//$shorturll = json_decode($shorturl,true);
-//$shorturlll = $shorturll['shortenedUrl'];
+	$shorturl = cURL('https://ilinkshort.com/api?api=230a1603f353d3d7ed4ef2aae4fd542c1647403b&url='.$ourl);
+	$shorturl = strpbrk($shorturl,'{');
+$shorturll = json_decode($shorturl,true);
+$shorturlll = $shorturll['shortenedUrl'];
 	
 
 	$abcd = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text=Openload id : '.$id);
 	$agshdn = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text=Openload Link : '.$ourl);
-	$yashsonani = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text=ShortenURL : '.$shorturl);
+	$yashsonani = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text=ShortenURL : '.$shorturlll);
 
 	}
 
