@@ -69,9 +69,9 @@ if (empty($_REQUEST['action']) || $_REQUEST['action'] != '_TD_') {
 $yash= json_decode($yash,true);
 $id = $yash['result']['id'];
 	$newurl = cURL($base.'/remotedl/status?login='.$_REQUEST['up_login'].'&key='.$_REQUEST['up_pass'].'&id='.$id);
-	$status = strpbrk($newurl,'{');
-$status = json_decode($status,true);
-$ourl = $status['result'][$id]['remoteurl'];
+	$newurl = strpbrk($newurl,'{');
+$newurl = json_decode($newurl,true);
+$ourl = $newurl['result'][$id]['remoteurl'];
 	$shorturl = cURL('https://ilinkshort.com/api?api=230a1603f353d3d7ed4ef2aae4fd542c1647403b&url='.$ourl);
 	$shorturl = strpbrk($shorturl,'{');
 $shorturll = json_decode($shorturl,true);
