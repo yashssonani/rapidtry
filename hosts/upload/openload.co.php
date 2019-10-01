@@ -78,8 +78,11 @@ $shorturll = json_decode($shorturl,true);
 $shorturlll = $shorturll['shortenedUrl'];
 	
 
-	$detail = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text='.\ud83c\udfac.$lname.\n\u267e.'Openload Link : '.$ourl.\n\ud83d\ude0d.'Shortlink : '.$shorturlll.\n\ud83d\udce4.'Upload By : @GTMovies');
-	}
+	$detail = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text=🎬 '.$lname
+.'♾ Openload Link : '.$ourl
+.'😍 Shortlink : '.$shorturlll
+.'📤 Upload By : @GTMovies');
+}
 	
 // Written by The Devil
 	
