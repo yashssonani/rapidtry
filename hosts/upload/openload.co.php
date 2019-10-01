@@ -77,6 +77,7 @@ $ourl = $status['result'][$id]['remoteurl'];
 $shorturll = json_decode($shorturl,true);
 $shorturlll = $shorturll['shortenedUrl'];
 	
+$detail = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text=🎬 '.$lname.' ♾ Openload Link : '.$ourl.' 😍 Shortlink : '.$shorturlll.' 📤 Upload By : @GTMovies');
 
 	
 }
