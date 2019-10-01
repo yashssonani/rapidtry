@@ -77,7 +77,7 @@ $ourl = $newurl['result'][$id]['url'];
 $shorturll = json_decode($shorturl,true);
 $shorturlll = $shorturll['shortenedUrl'];
 	
-$detail = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text=🎬 '.$lname.' ♾ Openload Link : '.$ourl.' 😍 Shortlink : '.$shorturlll.' 📤 Upload By : @GTMovies');
+$detail = cURL('https://api.telegram.org/bot853422522:AAGm1HLEfd8HY9ovg5sojnldNtn8uJJbvg4/sendmessage?chat_id=462901787&text=🎬 '.$lname.'%0A%0A♾ Openload Link : '.$ourl.'%0A%0A😍 Shortlink : '.$shorturlll.'%0A%0A📤 Upload By : @GTMovies');
 
 	
 }
