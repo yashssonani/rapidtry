@@ -4,7 +4,8 @@
 $upload_acc['openload_co']['user'] = "f1d6fd3b0273e481"; //Set your API Key Here
 $upload_acc['openload_co']['pass'] = "0HPuzuLW"; //Set your API Password Here
 ////////////////////////////////////////////////////////////////////////////
-
+$gpapi = "https://gplinks.in/api?api=d4a09d9a3deae813e0f385ec3092f34ac62452e3&url="
+	
 //Do Not Edit Below//
 ////////////////////////////////////////////////////////////////////////////
 if (!function_exists('json_decode')) html_error('Error: Please enable JSON in php.');
@@ -72,7 +73,7 @@ $id = $yash['result']['id'];
 	$newurl = strpbrk($newurl,'{');
 $newurl = json_decode($newurl,true);
 $ourl = $newurl['result'][$id]['url'];
-	$shorturl = cURL('https://ilinkshort.com/api?api=230a1603f353d3d7ed4ef2aae4fd542c1647403b&url='.$ourl);
+	$shorturl = cURL($gpapi.$ourl);
 	$shorturl = strpbrk($shorturl,'{');
 $shorturll = json_decode($shorturl,true);
 $shorturlll = $shorturll['shortenedUrl'];
