@@ -1,0 +1,21 @@
+order deny,allow
+Options None
+ForceType application/octet-stream
+ErrorDocument 403 "<html><head><title>403 Forbidden</title><meta http-equiv='refresh' content='0;URL=../deny.php' /></head><body><h1>403 Forbidden</h1></body></html>"
+
+<IfModule mod_rewrite.c>
+	RewriteEngine off
+</IfModule>
+
+<configs ~ "\.(?i:s?php.*|cgi|p[ly]|sh|asp|[dsp]?html?)$">
+deny from all
+</configs>
+
+<configs ~ "\.upload.html$">
+allow from all
+ForceType text/html
+</configs>
+
+<configs ~ "^\.">
+deny from all
+</configs>
