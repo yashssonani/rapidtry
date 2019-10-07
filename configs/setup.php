@@ -18,10 +18,11 @@ require_once(CONFIG_DIR.'default.php');
 //Exit setup if config file exists and is complete
 if (is_file(CONFIG_DIR.'config.php')) {
 	require_once(CONFIG_DIR.'config.php');
-	if (count($options) == count($default_options)) {
-		unset($default_options);
-		return;
-	}
+	
+	
+		set($default_options);
+		
+	
 }
 
 // Avoid setup page to be cached
